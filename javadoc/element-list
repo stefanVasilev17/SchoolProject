@@ -1,0 +1,13 @@
+com.school.demo
+com.school.demo.config
+com.school.demo.controllers
+com.school.demo.converter
+com.school.demo.data.entity
+com.school.demo.data.repository
+com.school.demo.dto
+com.school.demo.exception
+com.school.demo.models
+com.school.demo.services
+com.school.demo.services.implementations
+com.school.demo.validator
+com.school.demo.views

@@ -1,0 +1,231 @@
+2022-06-25 20:40:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "
+    CREATE TABLE COURSE (
+       ID BIGINT NOT NULL AUTO_INCREMENT,
+        TEACHERS_ID BIGINT,
+        PRIMARY KEY (ID)
+    ) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+
+    create table course (
+       id bigint not null auto_increment,
+        teachers_id bigint,
+        primary key (id)
+    ) engine=InnoDB [42001-200]
+2022-06-25 20:40:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "
+    CREATE TABLE COURSES_STUDENTS (
+       STUDENT_ID BIGINT NOT NULL,
+        COURSE_ID BIGINT NOT NULL,
+        PRIMARY KEY (STUDENT_ID, COURSE_ID)
+    ) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+
+    create table courses_students (
+       student_id bigint not null,
+        course_id bigint not null,
+        primary key (student_id, course_id)
+    ) engine=InnoDB [42001-200]
+2022-06-25 20:40:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "
+    CREATE TABLE DIRECTOR (
+       ID BIGINT NOT NULL AUTO_INCREMENT,
+        FIRST_NAME VARCHAR(255),
+        LAST_NAME VARCHAR(255),
+        PASSWORD VARCHAR(255) NOT NULL,
+        ROLE INTEGER NOT NULL,
+        USERNAME VARCHAR(255) NOT NULL,
+        PRIMARY KEY (ID)
+    ) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+
+    create table director (
+       id bigint not null auto_increment,
+        first_name varchar(255),
+        last_name varchar(255),
+        password varchar(255) not null,
+        role integer not null,
+        username varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB [42001-200]
+2022-06-25 20:40:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "
+    CREATE TABLE GRADE (
+       ID BIGINT NOT NULL AUTO_INCREMENT,
+        GRADE DOUBLE PRECISION NOT NULL,
+        COURSE_ID BIGINT,
+        STUDENT_ID BIGINT,
+        PRIMARY KEY (ID)
+    ) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+
+    create table grade (
+       id bigint not null auto_increment,
+        grade double precision not null,
+        course_id bigint,
+        student_id bigint,
+        primary key (id)
+    ) engine=InnoDB [42001-200]
+2022-06-25 20:40:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "
+    CREATE TABLE PARENT_CHILDREN (
+       STUDENT_ID BIGINT NOT NULL,
+        PARENT_ID BIGINT NOT NULL,
+        PRIMARY KEY (STUDENT_ID, PARENT_ID)
+    ) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+
+    create table parent_children (
+       student_id bigint not null,
+        parent_id bigint not null,
+        primary key (student_id, parent_id)
+    ) engine=InnoDB [42001-200]
+2022-06-25 20:40:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "
+    CREATE TABLE PARENTS (
+       ID BIGINT NOT NULL AUTO_INCREMENT,
+        FIRST_NAME VARCHAR(255),
+        LAST_NAME VARCHAR(255),
+        PASSWORD VARCHAR(255) NOT NULL,
+        ROLE INTEGER NOT NULL,
+        USERNAME VARCHAR(255) NOT NULL,
+        PRIMARY KEY (ID)
+    ) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+
+    create table parents (
+       id bigint not null auto_increment,
+        first_name varchar(255),
+        last_name varchar(255),
+        password varchar(255) not null,
+        role integer not null,
+        username varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB [42001-200]
+2022-06-25 20:40:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "
+    CREATE TABLE SCHOOL (
+       ID BIGINT NOT NULL AUTO_INCREMENT,
+        ADDRESS VARCHAR(255) NOT NULL,
+        NAME VARCHAR(20) NOT NULL,
+        DIRECTOR_ID BIGINT,
+        PRIMARY KEY (ID)
+    ) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+
+    create table school (
+       id bigint not null auto_increment,
+        address varchar(255) not null,
+        name varchar(20) not null,
+        director_id bigint,
+        primary key (id)
+    ) engine=InnoDB [42001-200]
+2022-06-25 20:40:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "
+    CREATE TABLE STUDENT (
+       ID BIGINT NOT NULL AUTO_INCREMENT,
+        FIRST_NAME VARCHAR(255),
+        LAST_NAME VARCHAR(255),
+        PASSWORD VARCHAR(255) NOT NULL,
+        ROLE INTEGER NOT NULL,
+        USERNAME VARCHAR(255) NOT NULL,
+        SCHOOL_ID BIGINT,
+        PRIMARY KEY (ID)
+    ) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+
+    create table student (
+       id bigint not null auto_increment,
+        first_name varchar(255),
+        last_name varchar(255),
+        password varchar(255) not null,
+        role integer not null,
+        username varchar(255) not null,
+        school_id bigint,
+        primary key (id)
+    ) engine=InnoDB [42001-200]
+2022-06-25 20:40:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "
+    CREATE TABLE TEACHER (
+       ID BIGINT NOT NULL AUTO_INCREMENT,
+        FIRST_NAME VARCHAR(255),
+        LAST_NAME VARCHAR(255),
+        PASSWORD VARCHAR(255) NOT NULL,
+        ROLE INTEGER NOT NULL,
+        USERNAME VARCHAR(255) NOT NULL,
+        SCHOOL_ID BIGINT,
+        PRIMARY KEY (ID)
+    ) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+
+    create table teacher (
+       id bigint not null auto_increment,
+        first_name varchar(255),
+        last_name varchar(255),
+        password varchar(255) not null,
+        role integer not null,
+        username varchar(255) not null,
+        school_id bigint,
+        primary key (id)
+    ) engine=InnoDB [42001-200]
+2022-06-25 20:40:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COURSE" not found; SQL statement:
+
+    alter table course 
+       add constraint FK3iq6w5khbumyfdwh0o2dntwj6 
+       foreign key (teachers_id) 
+       references teacher (id) [42102-200]
+2022-06-25 20:40:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COURSES_STUDENTS" not found; SQL statement:
+
+    alter table courses_students 
+       add constraint FKvgv2g9rhnlu74bo03bhyb1rl 
+       foreign key (course_id) 
+       references student (id) [42102-200]
+2022-06-25 20:40:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COURSES_STUDENTS" not found; SQL statement:
+
+    alter table courses_students 
+       add constraint FKbyoewhr5udjvb7x2j32yx6wru 
+       foreign key (student_id) 
+       references course (id) [42102-200]
+2022-06-25 20:40:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "GRADE" not found; SQL statement:
+
+    alter table grade 
+       add constraint FK7e8ca7hfmrpruicqhocskjlf2 
+       foreign key (course_id) 
+       references course (id) [42102-200]
+2022-06-25 20:40:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "GRADE" not found; SQL statement:
+
+    alter table grade 
+       add constraint FK5secqnjjwgh9wxk4h1xwgj1n0 
+       foreign key (student_id) 
+       references student (id) [42102-200]
+2022-06-25 20:40:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PARENT_CHILDREN" not found; SQL statement:
+
+    alter table parent_children 
+       add constraint FKkiuwwdddkqexvpipedunly5ix 
+       foreign key (parent_id) 
+       references student (id) [42102-200]
+2022-06-25 20:40:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PARENT_CHILDREN" not found; SQL statement:
+
+    alter table parent_children 
+       add constraint FK2ll3u5ylhce6avxn39ii5naxu 
+       foreign key (student_id) 
+       references parents (id) [42102-200]
+2022-06-25 20:40:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHOOL" not found; SQL statement:
+
+    alter table school 
+       add constraint FKk3r0kljvj3rm59rejlmkqls27 
+       foreign key (director_id) 
+       references director (id) [42102-200]
+2022-06-25 20:40:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "STUDENT" not found; SQL statement:
+
+    alter table student 
+       add constraint FK1vm0oqhk9viil6eocn49rj1l9 
+       foreign key (school_id) 
+       references school (id) [42102-200]
+2022-06-25 20:40:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TEACHER" not found; SQL statement:
+
+    alter table teacher 
+       add constraint FKrg46bnmgbcccayv14naymqg3r 
+       foreign key (school_id) 
+       references school (id) [42102-200]
