@@ -38,7 +38,6 @@ public class SchoolProgramImpl implements SchoolProgramService
     schoolProgram.setSchool(schoolRepository.findById(schoolId).orElseThrow());
     schoolProgram.setCourses(listOfCourses);
     schoolProgram.setWeekDay(schoolProgramPut.getWeekDay());
-    //schoolProgram.setSchoolProgramId(schoolProgramPut.getSchoolProgramId());
 
     schoolProgramRepository.save(schoolProgram);
   }
@@ -49,9 +48,6 @@ public class SchoolProgramImpl implements SchoolProgramService
 
     Map<String, List<CourseView>> schoolProgramMap = new HashMap<>();
 
-    // SchoolProgram schoolProgram1 = schoolProgramRepository.findById(schoolProgramId).orElseThrow();
-
-    //   List<String> weekDays = new ArrayList<>(Arrays.asList("Monday", "Tuesday", "Wednesday", "Thursday", "Friday"));
 
     List<SchoolProgram> schoolProgramListBySchoolId = schoolProgramRepository.findBySchoolId(schoolId);
 
@@ -59,29 +55,9 @@ public class SchoolProgramImpl implements SchoolProgramService
       schoolProgramMap.put(schoolProgram.getWeekDay(), converter.convertList(schoolProgram.getCourses(), CourseView.class));
     }
 
-//    for (String weekDay : weekDays) {
-//      schoolProgramMap.put(weekDay, converter.convertList(schoolProgram1.getCourses(), CourseView.class));
-//    }
-
     return schoolProgramMap;
   }
 
 
-  //  @Override
-  //  public Map<String, List<CourseIdAndGradesView>> getAllGrades(long parentId)
-  //  {
-  //    log.debug("Getting all child grades on parent " + parentId);
-  //    ParentDTO parentDTO = this.get(parentId);
-  //
-  //    List<StudentDTO> kids = converter.convertList(parentDTO.getKids(), StudentDTO.class);
-  //
-  //    Map<String, List<CourseIdAndGradesView>> kidsGrades = new HashMap<>();
-  //
-  //    for (StudentDTO kid : kids) {
-  //      kidsGrades.put(String.format("%s %s", kid.getFirstName(), kid.getLastName()),
-  //          service.getAllGrades(kid.getId()));
-  //    }
-  //
-  //    return kidsGrades;
-  //  }
+  
 }
